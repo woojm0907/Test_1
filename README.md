@@ -101,8 +101,30 @@ git version 2.55.0.windows.3
 
 ### 트러블슈팅 2건 이상(문제 → 원인 가설 → 확인 → 해결/대안)
 
+#### 1. 
 
+```bash
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# echo "OS: $(cat /etc/issue | head -n 1)"
+OS: This is Docker Desktop's WSL 2 LinuxKit bootstrap environment, intended for debugging only
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# echo "Shell: $SHELL"
+Shell: /bin/sh
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# git --version
+git version 2.52.0
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# docker --version
 
+It looks like you have tried to invoke the docker CLI from the docker-desktop WSL2 distribution. This is not supported.
+
+Please invoke the docker CLI from the Windows Command Prompt, PowerShell, or other compatible terminals.
+
+If you wish to interact with Docker Desktop from a third-party WSL2 distribution, such as Ubuntu, please enable the Docker Desktop WSL2 integration for it. See: https://docs.docker.com/desktop/wsl/#enabling-docker-support-in-wsl-2-distrosDESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# 
+```
+문제 이유 : 작업기기의 경우 윈도우 체제를 사용하며 윈도우 언어인 파워쉘(PowerShell)이 기본으로 되어있습니다. 그로 인해서 ios에서 사용되는 리눅스 언어인 wsl 언어에서는서로 구동을 제대로 할수 없어서 정보를 가져올 수 없는 것이 이유였습니다. 즉 다른 체제 사이의 연결 문제라는 점이었습니다.
+
+ 즉 Docker Desktop이 설치된 윈도우와 현재 사용 중인 WSL(리눅스 환경)이 서로 연결되어 있지 않기 때문입니다. 
+
+그래서 Docker Desktop에서 Resources -> WSL Integration를 켜주었는데도 안되서 보니 도커 전용 관리 구역이라서 명령어를 쳐도 작동을 안했던 것이었습니다.
+
+해결방법 : 결국  파워쉘(PowerShell)로 바꾸어서 명령어를 입력하여 작동시키니 정상적으로 작동했습니다.
 
 
 
