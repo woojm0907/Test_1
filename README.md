@@ -66,6 +66,25 @@ Please invoke the docker CLI from the Windows Command Prompt, PowerShell, or oth
 If you wish to interact with Docker Desktop from a third-party WSL2 distribution, such as Ubuntu, please enable the Docker Desktop WSL2 integration for it. See: https://docs.docker.com/desktop/wsl/#enabling-docker-support-in-wsl-2-distrosDESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# 
 ```
 
+```bash
+Microsoft Windows 11 Pro
+
+Name                           Value                                 
+----                           -----                                 
+PSVersion                      5.1.26100.8875                        
+PSEdition                      Desktop                               
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}               
+BuildVersion                   10.0.26100.8875                       
+CLRVersion                     4.0.30319.42000                       
+WSManStackVersion              3.0                                   
+PSRemotingProtocolVersion      2.3                                   
+SerializationVersion           1.1.0.1   
+
+Docker version 29.6.2, build dfc4efb
+
+git version 2.55.0.windows.3
+```
+
 ### 수행 항목 체크리스트(터미널/권한/Docker/Dockerfile/포트/볼륨/Git/GitHub)
 
 
