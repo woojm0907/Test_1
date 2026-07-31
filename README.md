@@ -35,10 +35,36 @@ OS 정보: (Windows라면 systeminfo, Mac이라면 sw_vers)
 
 ### 실행 환경(OS/쉘/터미널, Docker 버전, Git 버전)
 
+```bash
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# cat /etc/os-release
+PRETTY_NAME="Docker Desktop"
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# echo $SHELL
+/bin/sh
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# docker --version
 
+It looks like you have tried to invoke the docker CLI from the docker-desktop WSL2 distribution. This is not supported.
 
+Please invoke the docker CLI from the Windows Command Prompt, PowerShell, or other compatible terminals.
 
+If you wish to interact with Docker Desktop from a third-party WSL2 distribution, such as Ubuntu, please enable the Docker Desktop WSL2 integration for it. See: https://docs.docker.com/desktop/wsl/#enabling-docker-support-in-wsl-2-distrosDESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# git --version
+git version 2.52.0
+```
 
+```bash
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# echo "OS: $(cat /etc/issue | head -n 1)"
+OS: This is Docker Desktop's WSL 2 LinuxKit bootstrap environment, intended for debugging only
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# echo "Shell: $SHELL"
+Shell: /bin/sh
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# git --version
+git version 2.52.0
+DESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# docker --version
+
+It looks like you have tried to invoke the docker CLI from the docker-desktop WSL2 distribution. This is not supported.
+
+Please invoke the docker CLI from the Windows Command Prompt, PowerShell, or other compatible terminals.
+
+If you wish to interact with Docker Desktop from a third-party WSL2 distribution, such as Ubuntu, please enable the Docker Desktop WSL2 integration for it. See: https://docs.docker.com/desktop/wsl/#enabling-docker-support-in-wsl-2-distrosDESKTOP-IM37LLL:/mnt/host/c/Users/USER/Desktop/test_1/Test_1# 
+```
 
 ### 수행 항목 체크리스트(터미널/권한/Docker/Dockerfile/포트/볼륨/Git/GitHub)
 
