@@ -59,12 +59,14 @@ git version 2.55.0.windows.3
 터미널
 
 
-파일권한
-total 0
--rw-r--r--    1 root     root             0 Aug  5 05:12 Dockerfile
-drwxrwxrwx    1 root     root          4096 Jul 31 07:20 Test_1
+###### 파일권한
+total 8
+-rw-r--r--    1 root     root           101 Aug  5 07:25 Dockerfile
+-rwxrwxrwx    1 root     root          5148 Aug  5 06:21 README.md
+drwxrwxrwx    1 root     root          4096 Aug  5 06:26 Test_1
+drwxrwxrwx    1 root     root          4096 Aug  5 07:17 app
 
-도커 목록
+##### 도커 목록
 Usage:  docker image COMMAND
 
 Manage images
@@ -92,6 +94,139 @@ IMAGE   ID             DISK USAGE
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS  gi   NAMES
 
 DRIVER    VOLUME NAME
+
+##### Docker/Ports
+
+CONTAINER ID   IMAGE          COMMAND            CREATED          STATUS          PORTS                                     NAMES
+f5fb19aaebb4   my-flask-app   "python main.py"   56 minutes ago   Up 56 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-container
+
+##### 볼륨
+CONTAINER ID   IMAGE          COMMAND            CREATED          STATUS          PORTS                                     NAMES
+f5fb19aaebb4   my-flask-app   "python main.py"   56 minutes ago   Up 56 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-container
+PS C:\Users\USER\Desktop\test_1> docker ps
+CONTAINER ID   IMAGE          COMMAND            CREATED          STATUS          PORTS                                     NAMES
+f5fb19aaebb4   my-flask-app   "python main.py"   58 minutes ago   Up 58 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-container
+PS C:\Users\USER\Desktop\test_1> docker
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  bake        Build from a file
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Authenticate to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  agent*      Docker AI Agent Runner
+  ai*         Docker AI Agent - Ask Gordon
+  builder     Manage builds
+  buildx*     Docker Buildx
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  debug*      Get a shell into any image or container
+  desktop*    Docker Desktop commands
+  dhi*        CLI for managing Docker Hardened Images
+  extension*  Manages Docker extensions
+  image       Manage images
+  init*       Creates Docker-related starter files for your project
+  manifest    Manage Docker image manifests and manifest lists
+  mcp*        Docker MCP Plugin
+  model*      Docker Model Runner
+  network     Manage networks
+  offload*    Docker Offload
+  pass*       Docker Pass Secrets Manager Plugin (beta)
+  plugin      Manage plugins
+  scout*      Docker Scout
+  system      Manage Docker
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default
+                           "C:\\Users\\USER\\.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host string        Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info",
+                           "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "C:\\Users\\USER\\.docker\\ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "C:\\Users\\USER\\.docker\\cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "C:\\Users\\USER\\.docker\\key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+
+##### Git
+commit a96d6b8a163a0253c7112043c9a38821c3056ec5 (HEAD -> master, origin/master)
+Author: woojm0907 <woojm0907@gmail.com>
+Date:   Wed Aug 5 15:31:36 2026 +0900
+
+    fix: nested git issue resolved
+
+commit ab634b9899595a760ca6af975a5fc6a1a3eddb29
+Author: woojm0907 <woojm0907@gmail.com>
+Date:   Wed Aug 5 15:23:46 2026 +0900
+
+    fix: remove nested git and add all files
+
+commit 37dcf9c938758d4a166f42cd4194ad6af5ff81e7
+Author: woojm0907 <woojm0907@gmail.com>
+Date:   Wed Aug 5 15:05:53 2026 +0900
+
+    a
+
 
 
 
