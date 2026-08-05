@@ -60,13 +60,18 @@ git version 2.55.0.windows.3
 
 
 ###### 파일권한
+
+```bash
 total 8
 -rw-r--r--    1 root     root           101 Aug  5 07:25 Dockerfile
 -rwxrwxrwx    1 root     root          5148 Aug  5 06:21 README.md
 drwxrwxrwx    1 root     root          4096 Aug  5 06:26 Test_1
 drwxrwxrwx    1 root     root          4096 Aug  5 07:17 app
+```
 
 ##### 도커 목록
+
+```bash
 Usage:  docker image COMMAND
 
 Manage images
@@ -94,13 +99,17 @@ IMAGE   ID             DISK USAGE
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS  gi   NAMES
 
 DRIVER    VOLUME NAME
+```
 
 ##### Docker/Ports
-
+```bash
 CONTAINER ID   IMAGE          COMMAND            CREATED          STATUS          PORTS                                     NAMES
 f5fb19aaebb4   my-flask-app   "python main.py"   56 minutes ago   Up 56 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-container
+```
 
 ##### 볼륨
+
+```bash
 CONTAINER ID   IMAGE          COMMAND            CREATED          STATUS          PORTS                                     NAMES
 f5fb19aaebb4   my-flask-app   "python main.py"   56 minutes ago   Up 56 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-container
 PS C:\Users\USER\Desktop\test_1> docker ps
@@ -207,8 +216,11 @@ Global Options:
 Run 'docker COMMAND --help' for more information on a command.
 
 For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+```
 
 ##### Git
+
+```bash
 commit a96d6b8a163a0253c7112043c9a38821c3056ec5 (HEAD -> master, origin/master)
 Author: woojm0907 <woojm0907@gmail.com>
 Date:   Wed Aug 5 15:31:36 2026 +0900
@@ -226,7 +238,7 @@ Author: woojm0907 <woojm0907@gmail.com>
 Date:   Wed Aug 5 15:05:53 2026 +0900
 
     a
-
+```
 
 
 
